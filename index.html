@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<title>Wrapp demo</title>
+
+<!-- lib -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+
+<!-- dev -->
+<script src="js/wrappDemoCtrl.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="WrappDemoCtrl">
+<h1 id="title">{{title}}</h1>
+<div id="calculator">
+  <div class="input-group" id="inputOutputBar">
+    <input type="text" placeholder="0" ng-model="inputOutputModel" class="form-control">
+    <span class="input-group-btn">
+          <button class="btn btn-success" type="button" ng-click="eval()" ng-disabled="!validInput">=</button>
+    </span>
+  </div>
+  <p>
+    <button type="button" ng-click="addToInput('(')" class="btn btn-primary">(</button>
+    <button type="button" ng-click="addToInput(')')" class="btn btn-primary">)</button>
+    <button type="button" ng-click="addToInput('%')" class="btn btn-primary">%</button>
+    <button type="button" ng-click="cleanInput()" class="btn btn-primary">AC</button>
+  </p>
+  <p>
+    <button type="button" ng-click="addToInput(7)" class="btn btn-default">7</button>
+    <button type="button" ng-click="addToInput(8)" class="btn btn-default">8</button>
+    <button type="button" ng-click="addToInput(9)" class="btn btn-default">9</button>
+    <button type="button" ng-click="addToInput('/')" class="btn btn-primary">/</button>
+  </p>
+  <p>
+    <button type="button" ng-click="addToInput(4)" class="btn btn-default">4</button>
+    <button type="button" ng-click="addToInput(5)" class="btn btn-default">5</button>
+    <button type="button" ng-click="addToInput(6)" class="btn btn-default">6</button>
+    <button type="button" ng-click="addToInput('x')" class="btn btn-primary">x</button>
+  </p>
+  <p>
+    <button type="button" ng-click="addToInput(1)" class="btn btn-default">1</button>
+    <button type="button" ng-click="addToInput(2)" class="btn btn-default">2</button>
+    <button type="button" ng-click="addToInput(3)" class="btn btn-default">3</button>
+    <button type="button" ng-click="addToInput('-')" class="btn btn-primary">-</button>
+  </p>
+  <p>
+    <button type="button" ng-click="addToInput(0)" class="btn btn-default">0</button>
+    <button type="button" ng-click="addToInput('.')" class="btn btn-default">.</button>
+    <button type="button" ng-click="evalExp()" class="btn btn-success" ng-disabled="!validInput">=</button>
+    <button type="button" ng-click="addToInput('+')" class="btn btn-primary">+</button>
+  </p>
+</div>
+<!-- <p style="font-size: 20px; color: white">{{inputOutputModel}}</p> -->
+<!-- <p style="font-size: 20px; color: white">{{validInput}}</p> -->
+
+
+</body>
+</html>

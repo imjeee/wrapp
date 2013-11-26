@@ -1,0 +1,26 @@
+body {
+  background-color: #222;
+
+  #title {
+    text-align: center;
+    color: #CCC;
+  }
+
+  #calculator {
+    margin: 20px auto;
+    width: 482px;
+
+    #inputOutputBar {
+      margin: 0 0 10px 0;
+    } 
+
+    .btn {
+      width: 110px;
+      margin: 0 0 10px 0;
+      &:focus { outline-width: 0; }
+      &:not(:last-child) { margin-right: 10px; }
+    }
+
+    input { text-align: right; }
+  }
+}

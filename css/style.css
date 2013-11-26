@@ -1,0 +1,19 @@
+body {
+  background-color: #222; }
+  body #title {
+    text-align: center;
+    color: #CCC; }
+  body #calculator {
+    margin: 20px auto;
+    width: 482px; }
+    body #calculator #inputOutputBar {
+      margin: 0 0 10px 0; }
+    body #calculator .btn {
+      width: 110px;
+      margin: 0 0 10px 0; }
+      body #calculator .btn:focus {
+        outline-width: 0; }
+      body #calculator .btn:not(:last-child) {
+        margin-right: 10px; }
+    body #calculator input {
+      text-align: right; }
